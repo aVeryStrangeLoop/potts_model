@@ -53,7 +53,7 @@ class cConfig:
 
         # Write your own code here to output the hamiltonian given a system configuration
         if self.DEBUG_MODE:
-            print "Calculating hamiltonian"
+            print("Calculating hamiltonian")
         
         # Parameters for glazier model
         def J(s1,s2):
@@ -155,7 +155,7 @@ class cConfig:
             new_state = random.choice(self.STATES)      
 
         if self.DEBUG_MODE:
-            print "%d state mutated to %d" % (cur_state,new_state)
+            print("%d state mutated to %d" % (cur_state,new_state))
         return new_state
         
 
@@ -169,7 +169,7 @@ class cConfig:
             # Choose any cell in Z and change its contents randomly to one of the states
             target_state = self.StateMutator(Z[i,j]) 
             if self.DEBUG_MODE:
-                print "Conserved state mode OFF, randomly switching the cell state at (%d,%d) from %d to %d" % (i,j,Z[i,j],target_state)
+                print("Conserved state mode OFF, randomly switching the cell state at (%d,%d) from %d to %d" % (i,j,Z[i,j],target_state))
             mut = np.copy(Z)
             mut[i,j] = target_state
             return mut
@@ -223,7 +223,7 @@ class cConfig:
                     mut[i2,j2] = state_1
 
                     if self.DEBUG_MODE:
-                        print "Conserved state mode ON, exchanging states %d and %d at (%d,%d) and (%d,%d) resp." % (state_1,state_2,i1,j1,i2,j2)
+                        print("Conserved state mode ON, exchanging states %d and %d at (%d,%d) and (%d,%d) resp." % (state_1,state_2,i1,j1,i2,j2))
                     return mut
             
 
@@ -232,8 +232,8 @@ class cConfig:
         # For now it is chosen randomly from given states, change this function to change the initial config
         init = np.random.choice(self.STATES,(self.WORLD_X,self.WORLD_Y))
         if self.DEBUG_MODE:
-            print "Initialised configuration,"
-            print init
+            print("Initialised configuration,")
+            print(init)
         return init
         
 
