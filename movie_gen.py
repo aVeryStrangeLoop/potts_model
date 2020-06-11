@@ -1,14 +1,16 @@
 # Generate a movie of the run using outputs in the results folder
 import sys
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import matplotlib.animation as animation
 
 if len(sys.argv)<3:
-    print "movie_gen.py generates a movie using the mcs_.csv system configuration files in the given folder"
-    print "usage : python movie_gen <folder> <save_every>"
-    print "NOTE: The given folder must contain the summary.csv file containing temperature and energy data about mcs steps"
+    print("movie_gen.py generates a movie using the mcs_.csv system configuration files in the given folder")
+    print("usage : python movie_gen <folder> <save_every>")
+    print("NOTE: The given folder must contain the summary.csv file containing temperature and energy data about mcs steps")
     exit(0)
 
 folder = sys.argv[1]
@@ -32,7 +34,7 @@ with open(folder+"/summary.csv") as sfile:
 
 
 def GetSys(mcs):
-    print "getting data for mcs %d" % mcs
+    print("getting data for mcs %d" % mcs)
     img = np.loadtxt(folder+"/mcs_"+str(mcs)+".csv")
     return img
 
@@ -45,7 +47,7 @@ def init():
     return [plot]
 
 def animate(step):
-    print "animating step %d" % step
+    print("animating step %d" % step)
     data = GetSys(step)
     plot.set_data(data)
     cur_mcs = step

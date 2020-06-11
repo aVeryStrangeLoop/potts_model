@@ -29,19 +29,17 @@ class cConfig:
 
     DEBUG_MODE = False # Set to True to get a verbose output
 
-    WORLD_X = 50 # Cells in X direction
-    WORLD_Y = 50 # Cells in y direction
+    WORLD_X = 100 # Cells in X direction
+    WORLD_Y = 100 # Cells in y direction
 
     MODE = 0 # Monte-carlo mode (0 = Constant temperature, 1 = cooling)
 
-    MAX_MCS = 400
+    steps = 2500001 # Total number of steps for monte_carlo(mode=0)/simulated annealing(mode=1)
 
-    steps = MAX_MCS*16.*WORLD_X*WORLD_Y # Total number of steps for monte_carlo(mode=0)/simulated annealing(mode=1)
-
-    save_every = 10000 # Save system state every <save_every> steps
+    save_every = 1000 # Save system state every <save_every> steps
 
     ## Monte-Carlo temperature (if mode==0)
-    temp_constant = 10.0
+    temp_constant = 1.0
     
     ## Cooling properties (if mode ==1)
     temp_init = 1000.0 # Initial temperature (Only applicable if mode==1)
@@ -82,7 +80,7 @@ class cConfig:
 
         lambda_area = 1. # Strength of area constraint
 
-        target_areas = [100.,100.,-1] # Target area for the three cell types (light,dark,med)
+        target_areas = [2000.,2000.,-1] # Target area for the three cell types (light,dark,med)
 
         def theta(target_area):
             if target_area > 0:
