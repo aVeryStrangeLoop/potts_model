@@ -1,4 +1,4 @@
-# Part of the multistate-ising solver package written by Bhaskar Kumawat (@aVeryStrangeLoop)
+# Part of the Classical 2D potts package written by Bhaskar Kumawat (@aVeryStrangeLoop)
 # Filename : config.py
 # Contains : configuration for running the solver
 # Dependencies : numpy
@@ -39,7 +39,7 @@ class cConfig:
     save_every = 1000 # Save system state every <save_every> steps
 
     ## Monte-Carlo temperature (if mode==0)
-    temp_constant = 1.0
+    temp_constant = 10.0
     
     ## Cooling properties (if mode ==1)
     temp_init = 1000.0 # Initial temperature (Only applicable if mode==1)

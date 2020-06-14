@@ -1,4 +1,6 @@
-# Constant temperature monte carlo subroutine for multistate-ising solver
+# Constant temperature monte carlo subroutine for the classical potts model
+# Part of the Classical 2D potts package written by Bhaskar Kumawat (@aVeryStrangeLoop)
+# Dependencies : numpy
 import numpy as np
 import random
 import math

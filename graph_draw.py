@@ -1,4 +1,6 @@
 # Draw a graph of system energy over MCS
+# Part of the Classical 2D potts package written by Bhaskar Kumawat (@aVeryStrangeLoop)
+# Dependencies : matplotlib
 import sys
 import matplotlib.pyplot as plt
 

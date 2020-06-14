@@ -1,3 +1,6 @@
+# Draw a numpy csv system state
+# Part of the Classical 2D potts package written by Bhaskar Kumawat (@aVeryStrangeLoop)
+# Dependencies : numpy and matplotlib
 import numpy as np
 import sys
 import matplotlib

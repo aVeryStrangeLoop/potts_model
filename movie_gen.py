@@ -1,4 +1,6 @@
 # Generate a movie of the run using outputs in the results folder
+# Part of the Classical 2D potts package written by Bhaskar Kumawat (@aVeryStrangeLoop)
+# Dependencies : numpy
 import sys
 import numpy as np
 import matplotlib

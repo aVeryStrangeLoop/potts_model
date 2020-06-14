@@ -1,4 +1,6 @@
-# Simulated Annealing subroutine for multistate-ising solver
+# Simulated Annealing subroutine for the classical 2D potts model
+# Part of the Classical 2D potts package written by Bhaskar Kumawat (@aVeryStrangeLoop)
+# Dependencies : numpy
 import numpy as np
 import random
 import math
